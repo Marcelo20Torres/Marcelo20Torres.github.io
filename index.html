@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -7,6 +7,15 @@
     <title>Vamo?</title>
     <style>
         
+        body {
+
+            background-image: url('H:/Users/usuario/Downloads/green.png');
+
+
+        }
+
+
+
         header {
 
 
@@ -23,10 +32,41 @@
             text-align: center;
             margin: auto;
             border: 3px solid rgb(0, 32, 0);
-            border-radius: 20px ;
+            border-radius: 20px;
             
 
 
+        }
+
+        section {
+
+            position: fixed;
+            top: 300px;
+            left: 920px;
+            background-color: rgb(2, 90, 2);
+            height: 4em;
+            width: 10em;
+            text-align: center;
+            border: 3px solid rgb(0, 32, 0);
+            border-radius: 20px;
+
+        }
+
+        nav{
+
+
+            
+            font-size: 25px;
+            position: fixed;
+            top: 430px;
+            left: 940px;
+            cursor: pointer;
+            height: 1.5em;
+            width: 5em;
+            text-align: center;
+            background-color: black;
+            border: 3px solid green;
+            border-radius: 20px;
         }
 
 
@@ -40,7 +80,7 @@
 </head>    
 
 
-<body background="C:\Users\usuario\Downloads\green.png">
+<body>
 
 
 
@@ -48,28 +88,44 @@
 
     <section id="conteudo">
         <h2>Sai Comigo?</h2>
-        <p>Escolha</p>
+           
     </section>
 
     <nav>
-        <a onclick="mostrarConteudo('pagina1')">Sim</a>
-        <a onclick="mostrarConteudo('pagina2')">Não</a>
+        <a href="#" onclick= "mostrarConteudo('pagina1')">Sim</a>
+        <a href="#" onclick="mostrarConteudo('pagina2')">Não</a>
         
     </nav>
 
     
 
     <script>
+
+        function mudarBack(url){
+            document.body.style.backgroundImage = "url('" + url + "')";
+        }
+
+
+
         function mostrarConteudo(pagina) {
             var conteudo = document.getElementById('conteudo');
 
             if (pagina === 'pagina1') {
-                conteudo.innerHTML = '<h2>Sim</h2><p>Conteúdo da Página 1.</p>';
+                conteudo.innerHTML = '<h2>Sim</h2><p>Vamboora, vai ser minha namorada hehe</p>';
+                mudarBack('H:/Users/usuario/Downloads/Emoji.png');
             } else if (pagina === 'pagina2') {
-                conteudo.innerHTML = '<h2>Não</h2><p>Conteúdo da Página 2.</p>';
+                conteudo.innerHTML = '<h2>Não</h2><p>Como assim, NÂO ?????</p>';
+                mudarBack('C:/Users/Root/Downloads/incrivel.gif')
+                
             }
         }
+
+
+
+        
     </script>
+
+    
 
         
 </body>
